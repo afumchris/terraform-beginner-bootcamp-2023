@@ -44,9 +44,9 @@ cat /etc/os-release
 
 ### Refactoring into Bash Scripts
 
-While addressing the Terraform CLI gpg depreciation concerns, we observed that the bash script steps contained a substantial amount of code. Consequently, we've created a bash script for Terraform CLI installation, located at [./bin/install_terraform_cli]([./bin/install_terraform_cli](https://github.com/afumchris/terraform-beginner-bootcamp-2023/blob/1-refactor-terraform-cli/bin/install_terraform_cli)). 
+While addressing the Terraform CLI gpg depreciation concerns, we observed that the bash script steps contained a substantial amount of code. Consequently, we've created a bash script for Terraform CLI installation, located at [./bin/install_terraform_cli](./bin/install_terraform_cli) 
 
-Edit the [.gitpod.yml]([.gitpod.yml](https://github.com/afumchris/terraform-beginner-bootcamp-2023/blob/1-refactor-terraform-cli/.gitpod.yml)) to install Terraform CLI at the start of a new environment. This simplifies debugging, enables manual Terraform CLI installation, and enhances portability for other projects requiring Terraform CLI installation.
+Edit the [.gitpod.yml](.gitpod.yml) to install Terraform CLI at the start of a new environment. This simplifies debugging, enables manual Terraform CLI installation, and enhances portability for other projects requiring Terraform CLI installation.
 
 #### Execution Considerations
 
