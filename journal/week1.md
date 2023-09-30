@@ -56,3 +56,21 @@ Terraform uses a specific order of precedence when determining the value of a va
   - Variable defaults
 
 [https://www.env0.com/blog/terraform-variables](https://www.env0.com/blog/terraform-variables)
+
+We can use the `-var` flag to set an input variable or override a variable in the tfvars file eg. `terraform -var user_uuid="my-user_uuid"`
+
+### var-file flag
+
+- TODO: document this flag
+
+### terraform.tvfars
+
+This is the default file to load in terraform variables in blunk
+
+### auto.tfvars
+
+- TODO: document this functionality for terraform cloud
+
+### order of terraform variables
+
+- TODO: document which terraform variables takes presendence
