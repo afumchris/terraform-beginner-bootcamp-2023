@@ -13,12 +13,12 @@ terraform {
   #    name = "terra-house-1"
   #  }
   #}
-  #cloud {
-  #  organization = "Donniedarko"
-  #  workspaces {
-  #    name = "terra-house-1"
-  #  }
-  #}
+  cloud {
+    organization = "Donniedarko"
+    workspaces {
+      name = "terra-house-1"
+    }
+  }
 
 }
 
@@ -28,25 +28,36 @@ provider "terratowns" {
   token = var.terratowns_access_token
 }
 
-module "terrahouse_aws" {
-  source = "./modules/terrahouse_aws"
+module "paris-texas_hosting" {
+  source = "./modules/terrahome_aws"
   user_uuid = var.teacherseat_user_uuid
-  index_html_filepath = var.index_html_filepath
-  error_html_filepath = var.error_html_filepath
-  content_version = var.content_version
-  assets_path = var.assets_path
+  public_path = var.paris-texas.public_path
+  content_version = var.paris-texas.content_version
 }
 
-resource "terratowns_home" "home" {
-  name = "How to play Arcanum in 2023!"
+resource "terratowns_home" "paris-texas" {
+  name = "Review on the Movie Paris Texas by Wim Wenders"
   description = <<DESCRIPTION
-Arcanum is a game from 2001 that shipped with alot of bugs.
-Modders have removed all the originals making this game really fun
-to play (despite that old look graphics). This is my guide that will
-show you how to play arcanum without spoiling the plot.
+One of the best road trip movie i have seen!!
 DESCRIPTION
-  #domain_name = module.terrahouse_aws.cloudfront_url
-  domain_name = module.terrahouse_aws.cloudfront_url
-  town = "missingo"
-  content_version = 1
+  domain_name = module.paris-texas_hosting.domain_name
+  town = "video-valley"
+  content_version = var.paris-texas.content_version
+}
+
+module "study-music_hosting" {
+  source = "./modules/terrahome_aws"
+  user_uuid = var.teacherseat_user_uuid
+  public_path = var.study-music.public_path
+  content_version = var.study-music.content_version
+}
+
+resource "terratowns_home" "study-music" {
+  name = "Playlist and Albums i use to Study"
+  description = <<DESCRIPTION
+This is for all the Einsamer Hirte. LOL
+DESCRIPTION
+  domain_name = module.study-music_hosting.domain_name
+  town = "melomaniac-mansion"
+  content_version = var.study-time.content_version
 }
