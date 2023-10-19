@@ -38,7 +38,7 @@ module "paris-texas_hosting" {
 resource "terratowns_home" "paris-texas" {
   name = "Review on the Movie Paris Texas by Wim Wenders"
   description = <<DESCRIPTION
-One of the best road trip movie i have seen!!
+Not just one of the best road trip movie, but a road trip filled with memories about lost memories, love and rediscovery.
 DESCRIPTION
   domain_name = module.paris-texas_hosting.domain_name
   town = "video-valley"
@@ -59,5 +59,5 @@ This is for all the Einsamer Hirte. LOL
 DESCRIPTION
   domain_name = module.study-music_hosting.domain_name
   town = "melomaniac-mansion"
-  content_version = var.study-time.content_version
+  content_version = var.study-music.content_version
 }
