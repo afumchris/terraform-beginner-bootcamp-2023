@@ -1,9 +1,9 @@
 # Terraform Beginner Bootcamp 2023
 
+![Terra Town Architecture](assets/tf-ad1.png)
 
 
-
-## Weekly Journals
+## Weekly Journals :notebook:
 - [Week 0 Journal](journal/week0.md)
 - [Week 1 Journal](journal/week1.md)
 - [Week 2 Journal](journal/week2.md)
